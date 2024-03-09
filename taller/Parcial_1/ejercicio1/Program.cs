@@ -20,6 +20,15 @@ namespace ejercicio1
             const double sueldoBase = 1380000;
             const double porcentajeComision = 0.10;
             const double objetivoVentas = 1000000;
+
+            // declaracion de variables
+
+            double venta1, venta2, venta3;
+
+
+
+
+
         }
     }
 }
