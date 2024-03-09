@@ -38,14 +38,15 @@ namespace ejercicio1
             //¿Cuál fue la venta que le generó la mayor comisión?
 
             double mayor = venta1;
+            Console.WriteLine($"la venta que mas genero comision es: ${mayor: N0}, con un porcentaje de {venta1 * porcentajeComision} ");
 
             if (venta2 > mayor)
                 mayor = venta2;
+            Console.WriteLine($"la venta que mas genero comision es: ${mayor: N0}, con un porcentaje de {venta2 * porcentajeComision} ");
 
             if (venta3 > mayor)
                 mayor = venta3;
-
-            Console.WriteLine($"la venta que mas genero comision es: ${mayor: N0}");
+             Console.WriteLine($"la venta que mas genero comision es: ${mayor: N0}, con un porcentaje de {venta3 * porcentajeComision} ");
 
             //¿Cuál fue el promedio de las comisiones que recibió por cada venta?
 
