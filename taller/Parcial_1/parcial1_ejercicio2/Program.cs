@@ -19,7 +19,7 @@ namespace parcial1_ejercicio2
 
             //mensaje por pantalla
 
-            Console.WriteLine($"El segundo tren alcanzará al primer tren a las {horas}:{minutos:D2} AM.");
+            Console.WriteLine($"El segundo tren alcanzará al primer tren a las {horas}:{minutos:D2} PM.");
 
 
 
