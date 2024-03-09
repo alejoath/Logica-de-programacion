@@ -43,6 +43,7 @@ namespace ejercicio1
             promediocomision = comisiontotal / 3;
             Console.WriteLine($"Promedio de comisiones por ventas: ${promediocomision:N0}");
 
+
             if (venta1 + venta2 + venta3 >= objetivoventas) Console.WriteLine("¡GANO BENEFICIO EXTRA POR VENTAS!");
             else Console.WriteLine("No se cumplio con el objetivo de ventas :(");
 
