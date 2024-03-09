@@ -6,10 +6,7 @@ namespace ejercicio1
     internal class Program
     {
         static void Main(string[] args)
-        {
-            //¿Cuál es el total que recibirá en el mes tomando en cuenta su sueldo base y comisiones?
-            //¿Cuál fue la venta que le generó la mayor comisión?
-            //¿Cuál fue el promedio de las comisiones que recibió por cada venta?
+        {  //¿Cuál fue el promedio de las comisiones que recibió por cada venta?
 
             // declaracion de constantes
             const double sueldobase = 1380000;
@@ -38,6 +35,20 @@ namespace ejercicio1
 
             salariototal = sueldobase + comisiontotal;
             Console.WriteLine($"Salario total: {salariototal:N0}");
+
+            //¿Cuál fue la venta que le generó la mayor comisión?
+
+            double mayor = venta1;
+
+            if (venta2 > mayor)
+                mayor = venta2;
+
+            if (venta3 > mayor)
+                mayor = venta3;
+
+            Console.WriteLine($"la venta que mas genero comision es: {mayor}");
+
+
 
 
         }
