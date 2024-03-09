@@ -10,7 +10,7 @@ namespace ejercicio1
             // declaracion de constantes
             const double sueldobase = 1380000;
             const double porcentajeComision = 0.10;
-            const double objetivoVentas = 1000000;
+            const double objetivoventas = 1000000;
 
             // declaracion de variables
 
@@ -38,27 +38,28 @@ namespace ejercicio1
             //¿Cuál fue la venta que le generó la mayor comisión?
 
             double mayor = venta1;
-            Console.WriteLine($"la venta que mas genero comision es: ${mayor: N0}, con un porcentaje de {venta1 * porcentajeComision} ");
 
             if (venta2 > mayor)
                 mayor = venta2;
-            Console.WriteLine($"la venta que mas genero comision es: ${mayor: N0}, con un porcentaje de {venta2 * porcentajeComision} ");
 
             if (venta3 > mayor)
                 mayor = venta3;
-             Console.WriteLine($"la venta que mas genero comision es: ${mayor: N0}, con un porcentaje de {venta3 * porcentajeComision} ");
+
+            Console.WriteLine($"La venta que mas genero comision es: {mayor :N0}");
 
             //¿Cuál fue el promedio de las comisiones que recibió por cada venta?
 
             promediocomision = comisiontotal / 3;
             Console.WriteLine($"Promedio de comisiones por ventas: ${promediocomision:N0}");
 
+            //Además, la empresa da un beneficio extra de $100.000 si el vendedor supera el objetivo del mes.
+            //El objetivo es sumar en las 3 ventas como mínimo $1.000.000 en ventas.
+            //Mostrar un mensaje donde indique si ganó o no el beneficio.
+
+            if (venta1 + venta2 + venta3 >= objetivoventas) Console.WriteLine("¡GANO BENEFICIO EXTRA POR VENTAS!");
+            else Console.WriteLine("No se cumplio con el objetivo de ventas :(");
 
 
-
-
-
-
-        }
+    }
     }
 }
