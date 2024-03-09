@@ -13,6 +13,14 @@ namespace parcial1_ejercicio2
             double tiempoEncuentro = 1.0, distanciaRecorridaTren1 = velocidadTren1 * tiempoEncuentro;
             double distanciaTotal = distanciaRecorridaTren1, tiempoTotal = tiempoEncuentro + 1.0;
 
+            // calculo 
+            int horas = (int)tiempoTotal;
+            int minutos = (int)((tiempoTotal - horas) * 60);
+
+           
+
+
+
 
 
 
