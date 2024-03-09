@@ -25,6 +25,18 @@ namespace ejercicio1
 
             double venta1, venta2, venta3;
 
+            Console.WriteLine("Ingrese el valor de la primera venta: ");
+            venta1 = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Ingrese el valor de la segunda venta: ");
+            venta2 = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Ingrese el valor de la tercera venta: ");
+            venta3 = double.Parse(Console.ReadLine());
+
+
+
+
 
 
 
