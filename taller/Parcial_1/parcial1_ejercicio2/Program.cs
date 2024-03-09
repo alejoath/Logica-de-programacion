@@ -7,15 +7,15 @@ namespace parcial1_ejercicio2
         static void Main(string[] args)
         {
             //declaracion de constantes
-            const double velocidadTren1 = 80, velocidadTren2 = 100;
+            const double velocidadtren1 = 80, velocidadtren2 = 100;
 
             // declaracion de variables
-            double tiempoEncuentro = 1.0, distanciaRecorridaTren1 = velocidadTren1 * tiempoEncuentro;
-            double distanciaTotal = distanciaRecorridaTren1, tiempoTotal = tiempoEncuentro + 1.0;
+            double tiempoparaencrontrarse = 1.0, distanciaRecorridaTren1 = velocidadtren1 * tiempoparaencrontrarse;
+            double distanciaTotal = distanciaRecorridaTren1, tiempototal = tiempoparaencrontrarse + 1.0;
 
             // calculo 
-            int horas = (int)tiempoTotal;
-            int minutos = (int)((tiempoTotal - horas) * 60);
+            int horas = (int)tiempototal;
+            int minutos = (int)((tiempototal - horas) * 60);
 
             //mensaje por pantalla
 
