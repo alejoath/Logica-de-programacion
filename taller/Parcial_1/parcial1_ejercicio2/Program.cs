@@ -17,7 +17,11 @@ namespace parcial1_ejercicio2
             int horas = (int)tiempoTotal;
             int minutos = (int)((tiempoTotal - horas) * 60);
 
-           
+            //mensaje por pantalla
+
+            Console.WriteLine($"El segundo tren alcanzará al primer tren a las {horas}:{minutos:D2} AM.");
+
+
 
 
 
