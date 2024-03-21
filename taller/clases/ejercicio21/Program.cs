@@ -1,6 +1,4 @@
 ﻿using System;
-using System.IO.Pipes;
-using System.Reflection.PortableExecutable;
 
 namespace ejercicio21
 {
@@ -8,11 +6,10 @@ namespace ejercicio21
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Calculadora de IMC");
             string evaluarPaciente = "si";
 
-            Console.WriteLine("Calculadora de IMC");
-
-            while (evaluarPaciente == "si") 
+            while (evaluarPaciente == "si")
             {
                 double peso, altura;
 
@@ -27,18 +24,15 @@ namespace ejercicio21
                 string categoria = null;
 
                 if (imc < 18.5) categoria = "Peso insuficiente";
-                if (imc >= 18.5 &&  imc <= 24.9) categoria = "Peso saludable";
+                if (imc >= 18.5 && imc <= 24.9) categoria = "Peso saludable";
                 if (imc >= 25.0 && imc <= 29.9) categoria = "Sobre peso";
                 if (imc >= 29.9) categoria = "Obesidad";
 
                 Console.WriteLine($"El IMC del paciente es {imc:F2}. Categoría: {categoria}");
 
                 Console.WriteLine("¿Quiere consultar el imc de un nuevo pasiente? Responder si o no");
-                evaluarPaciente = Console.ReadLine(); 
+                evaluarPaciente = Console.ReadLine();
             }
-
-
-
         }
     }
 }
