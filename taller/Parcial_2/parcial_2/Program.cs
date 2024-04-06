@@ -6,12 +6,12 @@ namespace parcial_2
     {
         static void Main(string[] args)
         {
-            int numJugadores, minimo = 0, maximo = 0, intentos = 0, numAleatorio;
+            int numJugadores, minimo = 0, maximo = 0, intentos = 0, numAleatorio, numIngresado;
             bool adivinoelnum = false;
             string respuesta;
 
-            Console.WriteLine("Bienvenido al juego Adivina el número!");
-            Console.WriteLine("¿Cuántos jugadores participarán? (Entre 2 y 4): ");
+            Console.WriteLine("BIENVENIDOS AL JUEGO: ¡Adivina el número!");
+            Console.Write("¿Cuántos jugadores participarán? (Entre 2 y 4): ");
             numJugadores = int.Parse(Console.ReadLine());
 
             switch (numJugadores)
@@ -36,26 +36,26 @@ namespace parcial_2
             while (!adivinoelnum)
             {
                 Console.Write($"Jugador {intentos % numJugadores + 1}, ingresa tu número: ");
-                int numeroIngresado = int.Parse(Console.ReadLine());
+                numIngresado = int.Parse(Console.ReadLine());
 
-                if (numeroIngresado < numAleatorio) Console.WriteLine("MAYOR");
-                else if (numeroIngresado > numAleatorio) Console.WriteLine("MENOR");
+                if (numIngresado < numAleatorio) Console.WriteLine("MAYOR");
+                else if (numIngresado > numAleatorio) Console.WriteLine("MENOR");
                 else
                 {
-                    Console.WriteLine("¡HAS GANADO!");
+                    Console.WriteLine("¡GANASTE :)!");
                     adivinoelnum = true;
                 }
 
                 intentos++;
             }
-            Console.WriteLine("¿Deseas jugar de nuevo? (si o no): ");
+            Console.WriteLine("¿Quieren jugar otro tirito? (si o no): ");
             respuesta = Console.ReadLine();
             if (respuesta.ToLower() == "si")
             {
                 Console.Clear();
                 Main(args);
             }
-            else Console.WriteLine("¡Gracias por jugar!");
+            else Console.WriteLine("¡Vuelve a jugar pronto!");
    
         }
     }
