@@ -33,6 +33,28 @@ namespace parcial_2
             Random random = new Random();
             numeroAleatorio = random.Next(minimo, maximo + 1);
 
+            while (!haGanado)
+            {
+                Console.Write($"Jugador {intentos % numJugadores + 1}, ingresa tu número: ");
+                int numeroIngresado = int.Parse(Console.ReadLine());
+
+                if (numeroIngresado < numeroAleatorio)
+                {
+                    Console.WriteLine("MAYOR");
+                }
+                else if (numeroIngresado > numeroAleatorio)
+                {
+                    Console.WriteLine("MENOR");
+                }
+                else
+                {
+                    Console.WriteLine("¡HAS GANADO!");
+                    haGanado = true;
+                }
+
+                intentos++;
+            }
+
         }
     }
 }
