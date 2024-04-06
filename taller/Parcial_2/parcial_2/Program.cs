@@ -6,8 +6,8 @@ namespace parcial_2
     {
         static void Main(string[] args)
         {
-            int numJugadores, minimo = 0, maximo = 0, intentos = 0, numeroAleatorio;
-            bool haGanado = false;
+            int numJugadores, minimo = 0, maximo = 0, intentos = 0, numAleatorio;
+            bool adivinoelnum = false;
             string respuesta;
 
             Console.WriteLine("Bienvenido al juego Adivina el número!");
@@ -31,30 +31,32 @@ namespace parcial_2
             }
 
             Random random = new Random();
-            numeroAleatorio = random.Next(minimo, maximo + 1);
+            numAleatorio = random.Next(minimo, maximo + 1);
 
-            while (!haGanado)
+            while (!adivinoelnum)
             {
                 Console.Write($"Jugador {intentos % numJugadores + 1}, ingresa tu número: ");
                 int numeroIngresado = int.Parse(Console.ReadLine());
 
-                if (numeroIngresado < numeroAleatorio)
-                {
-                    Console.WriteLine("MAYOR");
-                }
-                else if (numeroIngresado > numeroAleatorio)
-                {
-                    Console.WriteLine("MENOR");
-                }
+                if (numeroIngresado < numAleatorio) Console.WriteLine("MAYOR");
+                else if (numeroIngresado > numAleatorio) Console.WriteLine("MENOR");
                 else
                 {
                     Console.WriteLine("¡HAS GANADO!");
-                    haGanado = true;
+                    adivinoelnum = true;
                 }
 
                 intentos++;
             }
-
+            Console.WriteLine("¿Deseas jugar de nuevo? (si o no): ");
+            respuesta = Console.ReadLine();
+            if (respuesta.ToLower() == "si")
+            {
+                Console.Clear();
+                Main(args);
+            }
+            else Console.WriteLine("¡Gracias por jugar!");
+   
         }
     }
 }
