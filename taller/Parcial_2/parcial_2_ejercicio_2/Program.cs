@@ -6,7 +6,6 @@ namespace parcial_2_ejercicio_2
     {
         static void Main(string[] args)
         {
-            // Variables
             bool volver = true;
             const double BONO = 0.4; // Snake Case: Notación para constantes.
 
@@ -27,6 +26,50 @@ namespace parcial_2_ejercicio_2
 
                     Console.Write($"Ingrese la cantidad que desea ahorrar en el mes {mes} para el socio 2: ");
                     aporteMensual2 = Convert.ToDecimal(Console.ReadLine());
+
+                    // Preguntar si el socio 1 quiere hacer un préstamo
+                    Console.Write($"¿El socio 1 quiere hacer un préstamo este mes? (s/n): ");
+                    string respuestaSocio1 = Console.ReadLine().ToLower();
+
+                    // Evaluar si el préstamo supera lo ahorrado
+                    if (respuestaSocio1 == "s")
+                    {
+                        Console.Write($"Ingrese el valor del préstamo para el socio 1: ");
+                        decimal prestamoSocio1 = Convert.ToDecimal(Console.ReadLine());
+
+                        if (prestamoSocio1 > aporteTotal1)
+                        {
+                            Console.WriteLine("No se aprobó la solicitud de préstamo para el socio 1. El valor del préstamo supera lo ahorrado hasta el momento.");
+                            continue; // Pasar al siguiente mes
+                        }
+                        else
+                        {
+                            // Mostrar mensaje de préstamo aprobado
+                            Console.WriteLine("Préstamo para el socio 1 aprobado.");
+                        }
+                    }
+
+                    // Preguntar si el socio 2 quiere hacer un préstamo
+                    Console.Write($"¿El socio 2 quiere hacer un préstamo este mes? (s/n): ");
+                    string respuestaSocio2 = Console.ReadLine().ToLower();
+
+                    // Evaluar si el préstamo supera lo ahorrado
+                    if (respuestaSocio2 == "s")
+                    {
+                        Console.Write($"Ingrese el valor del préstamo para el socio 2: ");
+                        decimal prestamoSocio2 = Convert.ToDecimal(Console.ReadLine());
+
+                        if (prestamoSocio2 > aporteTotal2)
+                        {
+                            Console.WriteLine("No se aprobó la solicitud de préstamo para el socio 2. El valor del préstamo supera lo ahorrado hasta el momento.");
+                            continue; // Pasar al siguiente mes
+                        }
+                        else
+                        {
+                            // Mostrar mensaje de préstamo aprobado
+                            Console.WriteLine("Préstamo para el socio 2 aprobado.");
+                        }
+                    }
 
                     tasaMensual1 = (decimal)random.Next(1, 51) / 10;
                     rendimientoMensual1 = aporteMensual1 * (tasaMensual1 / 100);
