@@ -8,7 +8,7 @@ namespace parcial_2
         {
             // Declaracion de variables
 
-            int numerodejugadores, maximo = 0, minimo = 0;
+            int numerodejugadores, maximo = 0, minimo = 0, numeroAleatorio;
 
             Console.WriteLine("BIENVENIDIOS AL JUEGO: ¡Adivina el numero!");
 
@@ -30,6 +30,11 @@ namespace parcial_2
                     Console.WriteLine("Cantidad de jugadores no válida. El juego se cerrará.");
                     return;
             }
+
+            // Generar un número aleatorio
+            Random random = new Random();
+            numeroAleatorio = random.Next(minimo, maximo + 1);
+
 
 
 
