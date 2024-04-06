@@ -6,16 +6,15 @@ namespace parcial_2
     {
         static void Main(string[] args)
         {
-            // Declaracion de variables
+            int numJugadores, minimo = 0, maximo = 0, intentos = 0, numeroAleatorio;
+            bool haGanado = false;
+            string respuesta;
 
-            int numerodejugadores, maximo = 0, minimo = 0, numeroAleatorio;
+            Console.WriteLine("Bienvenido al juego Adivina el número!");
+            Console.WriteLine("¿Cuántos jugadores participarán? (Entre 2 y 4): ");
+            numJugadores = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("BIENVENIDIOS AL JUEGO: ¡Adivina el numero!");
-
-            Console.Write("Ingrese la cantidad de jugadores entre (minimo 2 y maximo 4): ");
-            numerodejugadores = int.Parse(Console.ReadLine());
-            
-            switch (numerodejugadores)
+            switch (numJugadores)
             {
                 case 2:
                     maximo = 50;
@@ -27,20 +26,11 @@ namespace parcial_2
                     maximo = 200;
                     break;
                 default:
-                    Console.WriteLine("Cantidad de jugadores no válida. El juego se cerrará.");
+                    Console.WriteLine("Número de jugadores no válido. Elige entre 2 y 4.");
                     return;
             }
 
-            // Generar un número aleatorio
-            Random random = new Random();
-            numeroAleatorio = random.Next(minimo, maximo + 1);
-
-
-
-
-
-
-
+            
         }
     }
 }
