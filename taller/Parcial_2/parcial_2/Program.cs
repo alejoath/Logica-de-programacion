@@ -30,7 +30,9 @@ namespace parcial_2
                     return;
             }
 
-            
+            Random random = new Random();
+            numeroAleatorio = random.Next(minimo, maximo + 1);
+
         }
     }
 }
